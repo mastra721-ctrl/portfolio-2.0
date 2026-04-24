@@ -1,0 +1,2512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Portfolio</title>
+   
+    <link rel="stylesheet" href="https://use.typekit.net/vwn2zgy.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "owners-text", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            background: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            cursor: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3QgeD0iMTQuNzEiIHk9Ii0zLjY0IiB3aWR0aD0iMS4zOSIgaGVpZ2h0PSIzOC4xNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYuNCAxNS4wNykgcm90YXRlKC00NC4wOCkiLz4KICA8cmVjdCB4PSI4LjQ3IiB5PSIwLjI2IiB3aWR0aD0iMS4zOSIgaGVpZ2h0PSIxNy45NSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOS40MiAtMy43OCkgcm90YXRlKDQ1LjkyKSIvPgo8L3N2Zz4=') 2 2, auto;
+        }
+
+        * {
+            cursor: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3QgeD0iMTQuNzEiIHk9Ii0zLjY0IiB3aWR0aD0iMS4zOSIgaGVpZ2h0PSIzOC4xNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYuNCAxNS4wNykgcm90YXRlKC00NC4wOCkiLz4KICA8cmVjdCB4PSI4LjQ3IiB5PSIwLjI2IiB3aWR0aD0iMS4zOSIgaGVpZ2h0PSIxNy45NSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOS40MiAtMy43OCkgcm90YXRlKDQ1LjkyKSIvPgo8L3N2Zz4=') 2 2, auto;
+        }
+
+        a, button, [onclick] {
+            cursor: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3QgeD0iMTUuMTQiIHk9Ii42NCIgd2lkdGg9IjEuMzkiIGhlaWdodD0iMjkuODgiLz4KICA8cmVjdCB4PSIxNS4xMiIgeT0iLjY0IiB3aWR0aD0iMS4zOSIgaGVpZ2h0PSIyOS44OCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzEuMzkgLS4yNCkgcm90YXRlKDkwKSIvPgo8L3N2Zz4=') 16 16, pointer !important;
+        }
+
+        .circle, .side-circle, .nav-circle, .nav-name, .gallery-item, .social-icon, .modal-close, .modal-nav, .download-btn, .carousel img, .design-tag {
+            cursor: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3QgeD0iMTUuMTQiIHk9Ii42NCIgd2lkdGg9IjEuMzkiIGhlaWdodD0iMjkuODgiLz4KICA8cmVjdCB4PSIxNS4xMiIgeT0iLjY0IiB3aWR0aD0iMS4zOSIgaGVpZ2h0PSIyOS44OCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzEuMzkgLS4yNCkgcm90YXRlKDkwKSIvPgo8L3N2Zz4=') 16 16, pointer !important;
+        }
+
+        .modal, .modal * {
+            cursor: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogI2ZmZjsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB4PSIxNC43MSIgeT0iLTMuNjQiIHdpZHRoPSIxLjM5IiBoZWlnaHQ9IjM4LjE1IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNi40IDE1LjA3KSByb3RhdGUoLTQ0LjA4KSIvPgogIDxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iOC40NyIgeT0iMC4yNiIgd2lkdGg9IjEuMzkiIGhlaWdodD0iMTcuOTUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDkuNDIgLTMuNzgpIHJvdGF0ZSg0NS45MikiLz4KPC9zdmc+') 2 2, auto !important;
+        }
+
+        .modal button, .modal img, .modal .carousel img, .about-tag   {
+            cursor: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogI2ZmZjsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB4PSIxNS4xNCIgeT0iLjY0IiB3aWR0aD0iMS4zOSIgaGVpZ2h0PSIyOS44OCIvPgogIDxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iMTUuMTIiIHk9Ii42NCIgd2lkdGg9IjEuMzkiIGhlaWdodD0iMjkuODgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMxLjM5IC0uMjQpIHJvdGF0ZSg5MCkiLz4KPC9zdmc+') 16 16, pointer !important;
+        }
+
+        .cv-circle, .nav-cv, .download-btn {
+            cursor: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogI2ZmZjsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB4PSIxNS4xNCIgeT0iLjY0IiB3aWR0aD0iMS4zOSIgaGVpZ2h0PSIyOS44OCIvPgogIDxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iMTUuMTIiIHk9Ii42NCIgd2lkdGg9IjEuMzkiIGhlaWdodD0iMjkuODgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMxLjM5IC0uMjQpIHJvdGF0ZSg5MCkiLz4KPC9zdmc+') 16 16, pointer !important;
+        }
+
+        body.no-scroll {
+            overflow: hidden;
+        }
+
+        .page {
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .page.hidden {
+            display: none;
+        }
+
+        .page.visible {
+            display: block;
+        }
+
+        .landing {
+            display: flex;
+        }
+
+        .landing.active {
+            display: flex;
+        }
+
+        /* Landing Page */
+        .landing {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+            position: relative;
+            overflow: visible;
+        }
+
+       .landing-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 300;
+    background: transparent;
+    z-index: 50;
+}
+
+        .venn-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding-top: 150px;
+        }
+
+        .venn-container {
+            position: relative;
+            width: 600px;
+            height: 600px;
+        }
+
+        .circle {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .circle:hover {
+            transform: scale(1.3);
+            z-index: 10;
+        }
+
+        .ceramics {
+            background: rgba(0, 174, 239, 0.5);
+            top: 15px;
+            left: 35px;
+        }
+
+        .printmaking {
+            background: rgba(236, 0, 140, 0.5);
+            top: 15px;
+            right: 35px;
+        }
+
+        .design {
+            background: rgba(255, 242, 0, 0.5);
+            top: 220px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .design:hover {
+            transform: translateX(-50%) scale(1.3);
+            z-index: 10;
+        }
+
+        .side-circles {
+            position: absolute;
+            right: 100px;
+            top: calc(50% + 50px);
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            z-index: 10;
+        }
+
+        .side-circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .side-circle:hover {
+            transform: scale(1.3);
+        }
+
+        .about-circle {
+            background: white;
+            border: 2px solid black;
+            color: black;
+        }
+
+        .cv-circle {
+            background: black;
+            color: white;
+        }
+
+   .nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    z-index: 100;
+}
+
+        .nav-bar.active {
+            display: flex;
+        }
+
+      .nav-left {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    position: absolute;
+    left: 40px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    position: absolute;
+    right: 40px;
+}
+
+        .nav-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .nav-circle:hover {
+            transform: scale(1.15);
+        }
+
+        .nav-circle::after {
+            content: attr(data-label);
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: black;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-circle:hover::after {
+            opacity: 1;
+        }
+
+        .nav-ceramics {
+            background: rgba(0, 174, 239, 0.8);
+        }
+
+        .nav-printmaking {
+            background: rgba(236, 0, 140, 0.8);
+        }
+
+        .nav-design {
+            background: rgba(255, 242, 0, 0.8);
+        }
+
+        .nav-about {
+            background: white;
+            border: 2px solid black;
+        }
+
+        .nav-cv {
+            background: black;
+        }
+
+        .nav-name {
+            font-size: 18px;
+            font-weight: 300;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-name:hover {
+            opacity: 0.7;
+        }
+/* About Page */
+.about {
+    padding: 200px 50px 80px;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.about.visible {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 30px !important;
+    align-items: flex-start  !important;
+}
+
+.about-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 0%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: #f0f0f0;
+    margin: 0;
+}
+
+.artist-statement {
+    flex: 1;
+    line-height: 1.8;
+    color: #333;
+    font-size: 14px;
+}
+.wiki-link {
+    text-decoration: underline;
+    color: #333;
+    transition: opacity 0.3s ease;
+}
+
+.wiki-link:hover {
+    opacity: 0.6;
+}
+.about-tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 50px;
+    justify-content: flex-start;
+}
+
+.about-tag {
+    padding: 6px 12px;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+                border: 2px solid black;
+
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.about-tag:hover {
+    background: rgb(0, 0, 0);
+    color: white
+}
+
+        /* Gallery Pages */
+.gallery {
+    padding: 90px 0px 30px;
+}
+
+.gallery-grid-printmaking {
+    column-count: 4;
+    column-gap: 50px;
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.gallery-grid-ceramics {
+    column-count: 4;
+    column-gap: 50px;
+}
+
+.ceramics-menu {
+    padding: 80px 40px 80px;
+    max-width: 75%;
+    margin: 0;
+    width: 200px;
+}
+
+.ceramics-menu-item {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 0;
+    border-bottom: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    width: 100%;
+}
+
+.ceramics-menu-item.active {
+    color: rgba(0, 174, 239, 1);
+}
+
+.ceramics-menu-item:hover {
+    opacity: 0.6;
+}
+
+/* Ceramics Series Pages */
+.ceramics-series {
+    display: flex;
+    padding: 90px 40px 80px 280px;
+    min-height: 100vh;
+}
+
+.ceramics-series-nav {
+    position: fixed;
+    left: 40px;
+    top: 80px;
+    width: 200px;
+}
+
+.ceramics-series-nav-item {
+    font-size: 12px;
+    font-weight: 300;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.ceramics-series-nav-item:hover {
+    opacity: 0.6;
+}
+
+.ceramics-series-nav-item.active {
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.ceramics-series-content {
+    margin-left: 0;
+    width: 75%;
+    max-width: 75%;
+}
+
+.gallery-item {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    overflow: hidden;
+    break-inside: avoid;
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+}
+
+.gallery-item:hover {
+    opacity: 0.7;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: transparent;
+    display: block;
+}
+        /* CV Menu */
+        .cv-menu {
+            padding: 90px 40px 80px;
+            max-width: 200px;
+            margin: 0;
+            width: 200px;
+        }
+
+        .cv-menu-item {
+            font-size: 14px;
+            font-weight: 500;
+            padding: 20px 0;
+            border-bottom: none;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            width: 100%;
+        }
+
+        .cv-menu-item.active {
+            color: black;
+        }
+
+        .cv-menu-item:hover {
+            opacity: 0.6;
+        }
+
+        /* CV Series Pages */
+        .cv-series {
+            display: flex;
+            padding: 90px 40px 80px;
+            min-height: 100vh;
+        }
+
+        .cv-series-nav {
+            position: fixed;
+            left: 40px;
+            top: 90px;
+            width: 200px;
+        }
+
+        .cv-series-nav-item {
+            font-size: 14px;
+            font-weight: 500;
+            padding: 15px 0;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .cv-series-nav-item:hover {
+            opacity: 0.6;
+        }
+
+        .cv-series-nav-item.active {
+            font-weight: 500;
+            color: black;
+        }
+
+        .cv-series-content {
+            margin-left: 240px;
+            width: calc(100% - 240px);
+        }
+
+        .cv-text-content {
+            max-width: 800px;
+            line-height: 1.8;
+        }
+
+        .cv-text-content h2 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .cv-text-content h3 {
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .cv-text-content p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .cv-text-content ul {
+            list-style-position: inside;
+            margin-bottom: 15px;
+        }
+
+        .cv-text-content li {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .Resume-container {
+            width: 100%;
+            height: calc(100vh - 90px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .Resume-header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 0 15px 0;
+        }
+
+        .download-btn-small {
+            padding: 12px 24px;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .download-btn-small:hover {
+            background: #333;
+        }
+
+        .Resume-pdf {
+            width: 100%;
+            flex: 1;
+            border: none;
+            background: #f0f0f0;
+        }
+
+        /* Design Overview Page */
+        .design-overview {
+            display: flex;
+            padding: 90px 40px 80px;
+            min-height: 100vh;
+        }
+
+        .design-nav {
+            position: fixed;
+            left: 40px;
+            top: 80px;
+            width: 200px;
+        }
+
+        .design-nav-item {
+            font-size: 12px;
+            font-weight: 500;
+            padding: 8px 0;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .design-nav-item:hover {
+            opacity: 0.6;
+        }
+
+        .design-nav-item.active {
+            color: rgb(0, 0, 0);
+            font-size: 12px;
+            font-weight: 500;
+    text-decoration: underline;
+        }
+
+        .design-content {
+            margin-left: 200px;
+            width: calc(100% - 200px);
+        }
+
+        .design-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .design-project-card {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .design-project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .design-project-card img {
+            width: 300px;
+            height: 225px;
+            aspect-ratio: 1;
+            object-fit:scale-down;
+            background: #f0f0f0;
+            margin-bottom: 10px;
+                        border: 2px solid rgba(255, 242, 0, 0);
+
+        }
+
+        .design-project-name {
+            font-size: 14px;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        /* Design Project Detail Page */
+         .design-detail {
+            display: flex;
+            padding: 90px 40px 80px 0px;
+            min-height: 100vh;
+            gap: 40px;
+        }
+
+        .design-detail-images {
+            flex: 1.8;
+            overflow-y: auto;
+            padding-right: 40px;
+            padding-left: 0;
+            max-height: calc(100vh - 170px);
+        }
+        
+        .design-detail-images::-webkit-scrollbar {
+            display: none;
+        }
+
+        .design-detail-images {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom circular scroll indicator */
+        .scroll-circle {
+            position: fixed;
+            right: 50px;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 242, 0, 1);
+            border-radius: 50%;
+            z-index: 90;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .scroll-circle.active {
+            opacity: 1;
+        }
+
+        .design-detail-images img {
+            width: 100%;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .design-detail-info {
+            flex: 1;
+            position: sticky;
+            top: 90px;
+            height: fit-content;
+            overflow-y: hidden;
+            padding-left: 10px;
+            border-left: 0px solid rgba(255, 242, 0, 1);
+        }
+
+        .design-detail-title {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 25px;
+                margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .design-title-text {
+            flex: 1;
+        }
+        .design-description {
+            font-size: 12px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .design-pdf-link {
+            font-size: 12px;
+            text-decoration: underline;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            margin-bottom: 25px;
+        }
+
+        .design-pdf-link:hover {
+            opacity: 0.6;
+        }
+          .design-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .design-tag {
+            padding: 6px 12px;
+            background: rgba(255, 242, 0, 0.6);
+            border-radius: 20px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .design-tag:hover {
+            background: rgba(255, 242, 0, 0.9);
+        }
+
+        /* NEW: Design Tag Filter View */
+        .design-tag-view {
+            display: flex;
+            padding: 90px 40px 80px;
+            min-height: 100vh;
+        }
+
+        .design-tag-header {
+            position: fixed;
+            left: 40px;
+            top: 80px;
+            font-size: 12px;
+            font-weight: 500;
+             padding: 6px 12px;
+            background: rgba(255, 242, 0, 0.6);
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .design-tag-content {
+            margin-left: 200px;
+            width: calc(100% - 200px);
+        }
+
+        .design-back-button {
+            position: fixed;
+            left: 40px;
+            top: 120px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            text-decoration: underline;
+        }
+
+        .design-back-button:hover {
+            opacity: 0.6;
+        }
+
+    /* NEW: Design Navigation Buttons */
+        .design-project-nav {
+            display: flex;
+            gap: 0;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .design-nav-btn {
+            background: transparent;
+            color: black;
+            border: none;
+            cursor: pointer;
+            font-size: 12px;
+            transition: opacity 0.3s ease;
+            padding: 0;
+                text-decoration: underline;
+
+        }
+
+        .design-nav-separator {
+            margin: 0 8px;
+            font-style: italic;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.97);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            max-width: 100%;
+            max-height: 120vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 40px;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 65vh;
+            object-fit: contain;
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+
+        .modal-info {
+            color: white;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            max-width: 600px;
+        }
+
+        .modal-title {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .modal-details {
+            font-size: 12px;
+            color: #ccc;
+            white-space: pre-line;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            z-index: 1001;
+        }
+
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 20px;
+            transition: opacity 0.3s ease;
+            z-index: 1001;
+            user-select: none;
+        }
+
+        .modal-nav:hover {
+            opacity: 0.7;
+        }
+
+        .modal-prev {
+            left: 20px;
+        }
+
+        .modal-next {
+            right: 20px;
+        }
+
+        .carousel {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            justify-content: center;
+        }
+
+        .carousel img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .carousel img:hover,
+        .carousel img.active {
+            opacity: 1;
+        }
+
+        /* Footer */
+        .footer {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            margin-top: 60px;
+        }
+
+        /* ============================================
+           MOBILE STYLES (max-width: 768px)
+           ============================================ */
+
+        /* Mobile slide-in menu panel */
+        .mobile-menu-panel {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 75vw;
+            max-width: 300px;
+            height: 100vh;
+            background: white;
+            z-index: 500;
+            padding: 60px 30px 40px;
+            box-shadow: 4px 0 20px rgba(0,0,0,0.12);
+            transform: translateX(-100%);
+            transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+            flex-direction: column;
+            gap: 0;
+        }
+        .mobile-menu-panel.open {
+            transform: translateX(0);
+        }
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.3);
+            z-index: 499;
+            opacity: 0;
+            transition: opacity 0.35s;
+        }
+        .mobile-menu-overlay.open {
+            opacity: 1;
+        }
+        .mobile-menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 0;
+            font-size: 16px;
+            font-weight: 300;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .mobile-menu-item:last-child { border-bottom: none; }
+        .mobile-menu-item:active { opacity: 0.5; }
+        .mobile-menu-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px; right: 20px;
+            font-size: 22px;
+            background: none; border: none;
+            cursor: pointer; line-height: 1;
+        }
+
+        /* Mobile header (name + hamburger on inner pages) */
+        .mobile-header {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 56px;
+            background: white;
+            z-index: 200;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #f0f0f0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .mobile-header.hide-on-scroll {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        .mobile-header-name {
+            font-size: 16px;
+            font-weight: 300;
+            cursor: pointer;
+        }
+        .mobile-hamburger {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none; border: none;
+            cursor: pointer;
+            display: flex; flex-direction: column;
+            gap: 5px; padding: 4px;
+        }
+        .mobile-hamburger span {
+            display: block; width: 22px; height: 1.5px; background: black;
+        }
+
+        /* Mobile back button for design detail - replaced with X close button */
+        .mobile-back-btn {
+            display: none;
+        }
+
+        /* Mobile X close button for modals and detail pages */
+        .mobile-close-x {
+            display: none;
+            position: fixed;
+            top: 14px;
+            right: 16px;
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 1;
+            color: black;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 300;
+            padding: 4px;
+        }
+
+        /* Mobile bottom nav buttons for gallery modals only */
+        .mobile-bottom-nav {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid #eee;
+            padding: 16px 24px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1100;
+        }
+        .mobile-bottom-nav.visible {
+            display: flex;
+        }
+        .mobile-bottom-nav-btn {
+            background: transparent;
+            color: black;
+            border: none;
+            font-size: 14px;
+            font-family: "owners-text", sans-serif;
+            font-weight: 400;
+            cursor: pointer;
+            padding: 8px 0;
+            text-decoration: underline;
+        }
+        .mobile-bottom-nav-spacer {
+            font-size: 14px;
+            color: #999;
+        }
+
+        /* Modal mobile close X - overlaid on white modal */
+        .modal-mobile-close-x {
+            display: none;
+            position: fixed;
+            top: 14px;
+            right: 16px;
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 1;
+            color: black;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1200;
+        }
+
+        /* Mobile modal circle nav buttons - replaced by bottom nav */
+        .modal-circle-nav {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+
+            /* Disable custom cursors on mobile */
+            *, body, a, button, [onclick],
+            .circle, .side-circle, .nav-circle, .nav-name,
+            .gallery-item, .social-icon, .modal-close, .modal-nav,
+            .download-btn, .carousel img, .design-tag,
+            .modal, .modal *, .modal button, .modal img,
+            .modal .carousel img, .about-tag,
+            .cv-circle, .nav-cv, .download-btn {
+                cursor: auto !important;
+            }
+            a, button, [onclick], .circle, .side-circle, .nav-circle,
+            .mobile-menu-item, .mobile-hamburger { cursor: pointer !important; }
+
+            /* Hide desktop nav, show mobile header */
+            .nav-bar { display: none !important; }
+            .mobile-menu-panel { display: flex; }
+            /* mobile-header shown/hidden via JS based on page */
+            .mobile-close-x { display: block; }
+            .modal-mobile-close-x { display: block; }
+            .mobile-bottom-nav { display: flex; }
+
+            /* ---- LANDING PAGE ---- */
+            .landing {
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                min-height: 100vh;
+                position: relative;
+                overflow: hidden;
+            }
+            .landing-title {
+                position: relative;
+                top: auto; left: auto;
+                transform: none;
+                width: 100%;
+                text-align: center;
+                padding: 28px 20px 0;
+                font-size: 18px;
+            }
+            .venn-wrapper {
+                padding-top: 0;
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: calc(100vh - 60px - 160px);
+            }
+            .venn-container { width: 338px; height: 338px; }
+            .circle { width: 169px; height: 169px; font-size: 13px; }
+            .ceramics { top: 8px; left: 18px; }
+            .printmaking { top: 8px; right: 18px; }
+            .design { top: 123px; left: 50%; transform: translateX(-50%); }
+            .design:hover { transform: translateX(-50%) scale(1.3); }
+
+            /* Side circles bottom-left / bottom-right */
+            .side-circles {
+                position: fixed;
+                bottom: 30px; left: 0; right: 0; top: auto;
+                transform: none;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 30px; gap: 0; z-index: 20;
+            }
+            .side-circle { width: 80px; height: 80px; font-size: 12px; }
+
+            /* ---- ABOUT PAGE ---- */
+            .about { padding: 72px 20px 100px; max-width: 100%; }
+            .about.visible { flex-direction: column !important; }
+            .about-image { width: 100%; height: auto; max-width: 300px; margin: 0 auto; }
+
+            /* ---- CERAMICS: single scrolling page ---- */
+            .ceramics-series { flex-direction: column; padding: 72px 16px 100px; }
+            .ceramics-series-nav { display: none; }
+            .ceramics-series-content { width: 100%; max-width: 100%; margin-left: 0; }
+            .gallery-grid-ceramics { column-count: 2; column-gap: 12px; padding: 0; }
+            .mobile-ceramics-section-title {
+                display: block;
+                font-size: 13px; font-weight: 500;
+                padding: 20px 0 10px;
+                letter-spacing: 0.04em;
+                /* BLACK text for ceramics section titles */
+                color: #000;
+                break-before: column;
+                width: 100%;
+                column-span: all;
+            }
+
+            /* ---- PRINTMAKING ---- */
+            .gallery { padding: 72px 0 80px; }
+            .gallery-grid-printmaking {
+                column-count: 2; column-gap: 12px;
+                max-width: 100%; padding: 0 16px;
+            }
+
+            /* ---- MODAL (ceramics + printmaking) ---- */
+            .modal {
+                background: white;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 0;
+                overflow-y: auto;
+            }
+            /* Hide the dark-bg modal close on mobile - replaced by X */
+            .modal-close { display: none; }
+
+            /* Desktop side arrows hidden on mobile */
+            .modal-nav { display: none; }
+
+            .modal-content {
+                width: 100%;
+                /* Extra bottom padding for the bottom nav bar */
+                padding: 56px 16px 100px;
+                align-items: flex-start;
+                max-height: none;
+                padding-top: 0;
+            }
+            /* Description anchored top-left */
+            .modal-info {
+                text-align: left;
+                color: black;
+                margin: 0 0 16px 0;
+                max-width: 100%;
+                order: -1;
+                padding: 16px 0 0 0;
+            }
+            /* All modal text black */
+            .modal-title { color: black; font-size: 14px; }
+            .modal-details { color: #555; font-size: 12px; }
+
+            /* Images stacked vertically, full width */
+            #modal-image {
+                max-width: 100%; max-height: none;
+                width: 100%; height: auto;
+                margin-bottom: 12px;
+                cursor: default !important;
+            }
+            /* Carousel becomes vertical image scroll */
+            .carousel {
+                flex-direction: column;
+                gap: 12px;
+                width: 100%;
+                margin-top: 0;
+            }
+            .carousel img {
+                width: 100%; height: auto;
+                object-fit: contain;
+                opacity: 1;
+            }
+
+            /* ---- DESIGN OVERVIEW: single scroll ---- */
+            .design-overview {
+                flex-direction: column;
+                padding: 72px 16px 80px;
+            }
+            .design-nav { display: none; }
+            .design-content { margin-left: 0; width: 100%; }
+            .design-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+            }
+            .design-project-card img {
+                width: 100%; height: auto;
+                aspect-ratio: auto;
+            }
+            .design-project-name { padding: 8px 0 20px; font-size: 14px; }
+
+            /* ---- DESIGN DETAIL: info on top, carousel, then tags/link/nav ---- */
+            .design-detail {
+                flex-direction: column;
+                padding: 56px 16px 120px 16px;
+                gap: 0;
+            }
+            /* Nav panel on design detail hidden */
+            .design-detail .design-nav { display: none !important; }
+            .design-detail-info {
+                position: relative;
+                top: auto;
+                width: 100%;
+                border-left: none;
+                padding-left: 0;
+                margin-bottom: 20px;
+                overflow-y: visible;
+                /* Show on mobile — info first */
+                order: 1;
+            }
+            .design-detail-images {
+                max-height: none;
+                overflow-y: visible;
+                padding-right: 0;
+                width: 100%;
+                /* Images after info */
+                order: 2;
+            }
+            /* Hide desktop prev/next text buttons in detail */
+            .design-project-nav { display: none; }
+            /* Scroll circle indicator hidden on mobile */
+            .scroll-circle { display: none; }
+
+            /* Mobile design detail: extra sections shown at bottom */
+            .mobile-design-bottom {
+                order: 3;
+                width: 100%;
+                padding-bottom: 20px;
+            }
+
+            /* ---- CV ---- */
+            .cv-series { flex-direction: column; padding: 72px 16px 80px; }
+            .cv-series-nav {
+                position: relative; left: auto; top: auto;
+                width: 100%; display: flex; flex-wrap: wrap;
+                gap: 8px; margin-bottom: 20px;
+            }
+            .cv-series-nav-item {
+                padding: 4px 12px; border: 1px solid #ccc;
+                border-radius: 20px; font-size: 12px;
+            }
+            .cv-series-content { width: 100%; max-width: 100%; margin-left: 0; }
+
+            /* ---- TAG FILTER ---- */
+            .design-tag-view { flex-direction: column; padding: 72px 16px 80px; }
+            .design-tag-header { position: relative; left: auto; top: auto; margin-bottom: 12px; }
+            .design-back-button { position: relative; left: auto; top: auto; margin-bottom: 20px; display: block; }
+            .design-tag-content { margin-left: 0; width: 100%; }
+
+            /* Mobile detail title: no prev/next inline */
+            .design-detail-title {
+                margin-top: 16px;
+                margin-bottom: 12px;
+            }
+        }
+
+        .landing.visible ~ .footer {
+            display: flex;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 5px;
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-icon:hover {
+            opacity: 0.6;
+        }
+
+        .footer-text {
+            font-size: 11px;
+            color: #666;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar (desktop) -->
+    <nav class="nav-bar" id="nav-bar">
+        <div class="nav-left">
+            <div class="nav-circle nav-ceramics" data-label="Ceramics" onclick="navigate('ceramics')"></div>
+            <div class="nav-circle nav-printmaking" data-label="Printmaking" onclick="navigate('printmaking')"></div>
+            <div class="nav-circle nav-design" data-label="Design" onclick="navigate('design')"></div>
+        </div>
+        <div class="nav-name" onclick="navigateToLanding()">Marija Astrauskaite</div>
+        <div class="nav-right">
+            <div class="nav-circle nav-about" data-label="About Me" onclick="navigate('about')"></div>
+            <div class="nav-circle nav-cv" data-label="CV" onclick="navigate('cv')"></div>
+        </div>
+    </nav>
+
+    <!-- Mobile Header (name + hamburger) — hidden until leaving landing -->
+    <header class="mobile-header" id="mobile-header" style="display:none;">
+        <span class="mobile-header-name" onclick="navigateToLanding()">Marija Astrauskaite</span>
+        <button class="mobile-hamburger" id="mobile-hamburger" onclick="openMobileMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- Mobile X close button (for design detail pages) -->
+    <button class="mobile-close-x" id="mobile-close-x" style="display:none;" onclick="handleMobileClose()">×</button>
+
+    <!-- Mobile slide-in menu -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+    <div class="mobile-menu-panel" id="mobile-menu-panel">
+        <button class="mobile-menu-close" onclick="closeMobileMenu()">×</button>
+        <div class="mobile-menu-item" onclick="closeMobileMenu();navigate('ceramics')">
+            Ceramics
+            <span class="mobile-menu-dot" style="background:rgba(0,174,239,0.8)"></span>
+        </div>
+        <div class="mobile-menu-item" onclick="closeMobileMenu();navigate('printmaking')">
+            Printmaking
+            <span class="mobile-menu-dot" style="background:rgba(236,0,140,0.8)"></span>
+        </div>
+        <div class="mobile-menu-item" onclick="closeMobileMenu();navigate('design')">
+            Design
+            <span class="mobile-menu-dot" style="background:rgba(255,242,0,0.9);border:1px solid #ccc"></span>
+        </div>
+        <div class="mobile-menu-item" onclick="closeMobileMenu();navigate('about')">
+            About Me
+            <span class="mobile-menu-dot" style="background:white;border:2px solid black"></span>
+        </div>
+        <div class="mobile-menu-item" onclick="closeMobileMenu();navigate('cv')">
+            CV
+            <span class="mobile-menu-dot" style="background:black"></span>
+        </div>
+    </div>
+
+    <!-- Mobile modal X close button (white modal) -->
+    <button class="modal-mobile-close-x" id="modal-mobile-close-x" style="display:none;" onclick="closeModal()">×</button>
+
+    <!-- Mobile bottom navigation bar (prev/next) — shown when scrolled to bottom -->
+    <div class="mobile-bottom-nav" id="mobile-bottom-nav">
+        <button class="mobile-bottom-nav-btn" id="mobile-nav-prev" onclick="mobileNavPrev()">← Previous</button>
+        <button class="mobile-bottom-nav-btn" id="mobile-nav-next" onclick="mobileNavNext()">Next →</button>
+    </div>
+
+    <!-- Landing Page -->
+    <div class="page landing visible" id="landing">
+        <div class="landing-title">Marija Astrauskaite           </div>
+        <div class="venn-wrapper">
+            <div class="venn-container">
+                <div class="circle ceramics" onclick="navigate('ceramics')">
+                    Ceramics
+                </div>
+                <div class="circle printmaking" onclick="navigate('printmaking')">
+                    Printmaking
+                </div>
+                <div class="circle design" onclick="navigate('design')">
+                    Design
+                </div>
+            </div>
+        </div>
+        <div class="side-circles">
+            <div class="side-circle about-circle" onclick="navigate('about')">
+                About Me
+            </div>
+            <div class="side-circle cv-circle" onclick="navigate('cv')">
+                CV
+            </div>
+        </div>
+    </div>
+
+<!-- About Page -->
+<div class="page about hidden" id="about">
+    <img src="https://imgur.com/HRiXxYX.jpeg" alt="Artist Photo" class="about-image">
+    
+    <div class="artist-statement">
+        <p>Marija Astrauskaite (she/her) is a designer and artist with a degree in Industrial Design from the University of Illinois Chicago, working across spatial, furniture, and experimental design.<p>Her work explores the relationships between space, people, and objects, and is grounded in the dialogue between <a href="https://en.wikipedia.org/wiki/Qualitative_research" target="_blank" class="wiki-link">qualitative</a> and <a href="https://en.wikipedia.org/wiki/Quantitative_research" target="_blank" class="wiki-link">quantitative</a> ways of thinking.</p>
+</p>
+        <br>
+        <p>She is interested in the and, where logic meets intuition, data meets empathy, and beauty and function coexist. Designing through both reason and feeling, she believes intuition is what connects systems, creating pathways between analysis and experience.</p>
+        <br>
+        <p>Her practice reflects this balance through hands-on making, research, and experimentation. From furniture and spatial design to medical tools developed in collaboration with doctors, her work considers not only how objects function, but how they are felt, used, and lived with over time.</p>
+        
+        <div class="about-tags">
+            <div class="about-tag" onclick="navigate('Portfolio')">Portfolio</div>
+            <div class="about-tag" onclick="navigate('Resume')">Resume</div>
+        </div>
+    </div>
+</div>
+
+    <!-- CV Pages -->
+    <div class="page cv-menu hidden" id="cv">
+        <div class="cv-menu-item" onclick="navigate('Resume')">Resume</div>
+        <div class="cv-menu-item" onclick="navigate('Portfolio')">Portfolio</div>
+        <div class="cv-menu-item" onclick="navigate('BLANK2')">BLANK2</div>
+    </div>
+
+    <div class="page cv-series hidden" id="Resume">
+        <div class="cv-series-nav">
+            <div class="cv-series-nav-item active" onclick="navigate('Resume')">Resume</div>
+            <div class="cv-series-nav-item" onclick="navigate('Portfolio')">Portfolio</div>
+            <div class="cv-series-nav-item" onclick="navigate('BLANK2')">BLANK2</div>
+        </div>
+        <div class="cv-series-content">
+            <div class="Resume-container">
+                <div class="Resume-header">
+                    <button class="download-btn-small" onclick="window.open('https://drive.google.com/uc?export=download&id=1bB06FQ6YdCT373m0Dk24QDklHLfJYjrG',   '_blank')">
+                        Download PDF
+                    </button>
+                </div>
+                <iframe 
+                    src="https://drive.google.com/file/d/1bB06FQ6YdCT373m0Dk24QDklHLfJYjrG/preview" 
+                    class="Resume-pdf">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="page cv-series hidden" id="Portfolio">
+        <div class="cv-series-nav">
+<div class="cv-series-nav-item" onclick="navigate('Resume')">Resume</div>
+            <div class="cv-series-nav-item active" onclick="navigate('Portfolio')">Portfolio</div>
+            <div class="cv-series-nav-item" onclick="navigate('BLANK2')">BLANK2</div>
+        </div>
+        <div class="cv-series-content">
+            <div class="cv-text-content">
+                <h2>Portfolio</h2>
+                <h3>Solo Portfolio</h3>
+                <p><strong>2024</strong> - Exhibition Title, Gallery Name, City</p>
+                <p><strong>2023</strong> - Exhibition Title, Gallery Name, City</p>
+                <h3>Group Portfolio</h3>
+                <p><strong>2024</strong> - Exhibition Title, Gallery Name, City</p>
+                <p><strong>2023</strong> - Exhibition Title, Gallery Name, City</p>
+                <p><strong>2022</strong> - Exhibition Title, Gallery Name, City</p>
+                <p style="margin-top: 30px; font-style: italic;">Replace with your exhibition history.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page cv-series hidden" id="BLANK2">
+        <div class="cv-series-nav">
+            <div class="cv-series-nav-item" onclick="navigate('Resume')">Resume</div>
+            <div class="cv-series-nav-item" onclick="navigate('Portfolio')">Portfolio</div>
+            <div class="cv-series-nav-item active" onclick="navigate('BLANK2')">BLANK2</div>
+        </div>
+        <div class="cv-series-content">
+            <div class="cv-text-content">
+                <h2>BLANK2 & Awards</h2>
+                <h3>BLANK2</h3>
+                <p><strong>2024</strong> - MFA in Ceramics, University Name</p>
+                <p><strong>2020</strong> - BFA in Fine Arts, University Name</p>
+                <h3>Awards & Grants</h3>
+                <p><strong>2024</strong> - Award Name, Organization</p>
+                <p><strong>2023</strong> - Grant Name, Organization</p>
+                <h3>Residencies</h3>
+                <p><strong>2023</strong> - Residency Name, Location</p>
+                <p style="margin-top: 30px; font-style: italic;">Replace with your BLANK2 and achievements.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ceramics Pages -->
+    <div class="page ceramics-menu hidden" id="ceramics">
+        <div class="ceramics-menu-item" onclick="navigate('Dots + Fur')">Dots + Fur</div>
+        <div class="ceramics-menu-item" onclick="navigate('Bugs')">Bugs</div>
+        <div class="ceramics-menu-item" onclick="navigate('More')">More</div>
+    </div>
+
+    <div class="page ceramics-series hidden" id="Dots + Fur">
+        <div class="ceramics-series-nav">
+            <div class="ceramics-series-nav-item active" onclick="navigate('Dots + Fur')">Dots + Fur</div>
+            <div class="ceramics-series-nav-item" onclick="navigate('Bugs')">Bugs</div>
+            <div class="ceramics-series-nav-item" onclick="navigate('More')">More</div>
+        </div>
+        <div class="ceramics-series-content">
+            <div class="gallery-grid-ceramics" id="Dots + Fur-grid"></div>
+        </div>
+    </div>
+
+    <div class="page ceramics-series hidden" id="Bugs">
+        <div class="ceramics-series-nav">
+            <div class="ceramics-series-nav-item" onclick="navigate('Dots + Fur')">Dots + Fur</div>
+            <div class="ceramics-series-nav-item active" onclick="navigate('Bugs')">Bugs</div>
+            <div class="ceramics-series-nav-item" onclick="navigate('More')">More</div>
+        </div>
+        <div class="ceramics-series-content">
+            <div class="gallery-grid-ceramics" id="Bugs-grid"></div>
+        </div>
+    </div>
+
+    <div class="page ceramics-series hidden" id="More">
+        <div class="ceramics-series-nav">
+            <div class="ceramics-series-nav-item" onclick="navigate('Dots + Fur')">Dots + Fur</div>
+            <div class="ceramics-series-nav-item" onclick="navigate('Bugs')">Bugs</div>
+            <div class="ceramics-series-nav-item active" onclick="navigate('More')">More</div>
+        </div>
+        <div class="ceramics-series-content">
+            <div class="gallery-grid-ceramics" id="More-grid"></div>
+        </div>
+    </div>
+
+    <!-- Mobile Ceramics: single unified scroll page -->
+    <div class="page hidden" id="mobile-ceramics-all">
+        <div style="padding: 72px 16px 120px;">
+            <h2 class="mobile-ceramics-section-title">Dots + Fur</h2>
+            <div class="gallery-grid-ceramics" id="mob-dots-fur-grid"></div>
+            <h2 class="mobile-ceramics-section-title">Bugs</h2>
+            <div class="gallery-grid-ceramics" id="mob-bugs-grid"></div>
+            <h2 class="mobile-ceramics-section-title">More</h2>
+            <div class="gallery-grid-ceramics" id="mob-more-grid"></div>
+        </div>
+    </div>
+
+    <!-- Printmaking Gallery -->
+    <div class="page gallery hidden" id="printmaking">
+        <div class="gallery-grid-printmaking" id="printmaking-grid"></div>
+    </div>
+
+    <!-- Design Overview Page - MAIN GRID VIEW -->
+    <div class="page design-overview hidden" id="design">
+        <div class="design-nav" id="design-nav">
+            <div class="design-nav-item active" data-filter="all" onclick="filterDesignProjects('all')">All</div>
+        </div>
+        <div class="design-content">
+            <div class="design-grid" id="design-grid"></div>
+        </div>
+    </div>
+
+    <!-- Design Project Detail Pages will be dynamically created -->
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <button class="modal-nav modal-prev" onclick="navigateModal(-1)">←</button>
+        <button class="modal-nav modal-next" onclick="navigateModal(1)">→</button>
+        <div class="modal-content">
+            <div class="modal-info">
+                <div class="modal-title" id="modal-title"></div>
+                <div class="modal-details" id="modal-details"></div>
+            </div>
+            <img id="modal-image" src="" alt="">
+            <div class="carousel" id="carousel"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons">
+            <svg class="social-icon" onclick="window.open('https://instagram.com/marija.astraaa', '_blank')" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <svg class="social-icon" onclick="window.open('https://www.linkedin.com/in/marija-astrauskaite-323abb189', '_blank')" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            <svg class="social-icon" onclick="copyEmail()" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+        </div>
+        <div class="footer-text">© 2026</div>
+        <div class="footer-text">Marija Astrauskaite</div>
+        <div class="footer-text">Chicago, IL</div>
+    </footer>
+    <script>
+        const isMobile = () => window.innerWidth <= 768;
+
+        // ---- Mobile menu ----
+        function openMobileMenu() {
+            document.getElementById('mobile-menu-panel').classList.add('open');
+            document.getElementById('mobile-menu-overlay').style.display = 'block';
+            requestAnimationFrame(() => document.getElementById('mobile-menu-overlay').classList.add('open'));
+        }
+        function closeMobileMenu() {
+            document.getElementById('mobile-menu-panel').classList.remove('open');
+            const ov = document.getElementById('mobile-menu-overlay');
+            ov.classList.remove('open');
+            setTimeout(() => { ov.style.display = 'none'; }, 350);
+        }
+
+        // ---- Scroll-hide header ----
+        let lastScrollY = 0;
+        window.addEventListener('scroll', () => {
+            if (!isMobile()) return;
+            const hdr = document.getElementById('mobile-header');
+            const y = window.scrollY;
+            if (y > lastScrollY && y > 60) {
+                hdr.classList.add('hide-on-scroll');
+            } else {
+                hdr.classList.remove('hide-on-scroll');
+            }
+            lastScrollY = y;
+
+        }, { passive: true });
+
+        // ---- Bottom nav (ceramics + printmaking modal only) ----
+        function showBottomNav() {
+            document.getElementById('mobile-bottom-nav').classList.add('visible');
+        }
+
+        function hideBottomNav() {
+            document.getElementById('mobile-bottom-nav').classList.remove('visible');
+        }
+
+        function mobileNavPrev() {
+            navigateModal(-1);
+        }
+
+        function mobileNavNext() {
+            navigateModal(1);
+        }
+
+        // ---- Mobile close X handler ----
+        function handleMobileClose() {
+            // Close X on design detail → go back to design overview
+            navigate('design');
+        }
+
+        // Ceramics data
+        const ceramicsSeries1Data = [
+                    { title: "Short Fur Jar", date: "2022", clay: "Porcelain", images: ["https://imgur.com/eFY5cJo.jpeg", "https://imgur.com/r9S28na.jpeg", "https://imgur.com/7Qg9e8E.jpeg", "https://imgur.com/Yx5ZSI7.jpeg"] },
+   
+            { title: "Bug Urn", date: "2022", clay: "Red Clay and Bronze", dimensions: " 8 in x 6.5 in x 6.5 in", images: ["https://imgur.com/4hPTZp2.jpeg", "https://imgur.com/SBo1BGz.jpeg", "https://imgur.com/Xv4AfpM.jpeg", "https://imgur.com/dWd3O21.jpeg", "https://imgur.com/WWKxne8.jpeg"] },
+          
+                  { title: "Fur Jar", date: "2022", clay: "Porcelain", dimensions: " 5 in x 6 in x 5 in", images: ["https://imgur.com/KSnmDzf.jpeg", "https://imgur.com/eYf8SmE.jpeg", "https://imgur.com/lZgQm1k.jpeg", "https://imgur.com/UgWBokX.jpeg"] },
+                      { title: "Green Dot Jar", date: "2021", clay: "Stoneware",  images: ["https://imgur.com/o9SB5Eb.jpeg", "https://imgur.com/0jFobp9.jpeg", "https://imgur.com/lbKxDt9.jpeg"] },
+            { title: "Dandelion Jar", date: "2022", clay: "Porcelain", dimensions: " 7.5 in x 3 in", images: ["https://imgur.com/tBJ6jwf.jpeg", "https://imgur.com/XPbdoen.jpeg", "https://imgur.com/usKRMSq.jpeg"] },
+
+                  { title: "Drip Vase", date: "2022", clay: "Stoneware", dimensions: " 9.5 in x 5.5 in", images: ["https://imgur.com/A1Rmj0z.jpeg", "https://imgur.com/vE3sy5S.jpeg"] },
+
+            { title: "Orange Jar", date: "2022", clay: "Porcelain", dimensions: " 6 in x 4.5 in", images: ["https://imgur.com/M2F5gzx.jpeg", "https://imgur.com/UsIGkrY.jpeg", "https://imgur.com/RrwJfzP.jpeg"] },
+            { title: "Orb Vase", date: "2022", clay: "Stoneware",  images: ["https://imgur.com/2rAHvm0.jpeg", "https://imgur.com/K170gBj.jpeg", "https://imgur.com/vdbsEDr.jpeg", "https://imgur.com/q5Upk71.jpeg"] },
+            { title: "Dot Cup", date: "2022", clay: "Stoneware",  images: ["https://imgur.com/1yTvK9i.jpeg", "https://imgur.com/WFmcN35.jpeg", "https://imgur.com/5IhqBFm.jpeg"] },
+            { title: "Orange Dot", date: "2022", clay: "Stoneware", images: ["https://imgur.com/7GvvqcP.jpeg", "https://imgur.com/2k9WWM9.jpeg", "https://imgur.com/Up5kil4.jpeg"] },
+            { title: "Short Dot Jar", date: "2022", clay: "Porcelain", images: ["https://imgur.com/zxRsnel.jpeg", "https://imgur.com/5CKCFSt.jpeg", "https://imgur.com/qCaayY1.jpeg", "https://imgur.com/XGcnLPR.jpeg"] }
+        ];
+
+        const ceramicsSeries2Data = [
+             { title: "Untitled", date: "2022", clay: "Stoneware", images: ["https://imgur.com/QEBGmc6.jpeg", "https://imgur.com/G71PUbI.jpeg", "https://imgur.com/m9fRahR.jpeg"] },
+                          { title: "Untitled", date: "2022", clay: "Stoneware",  images: ["https://imgur.com/fLIDUxL.jpeg", "https://imgur.com/WCkPWqa.jpeg", "https://imgur.com/hfFYmzN.jpeg", "https://imgur.com/GGqr8kS.jpeg"] },
+               { title: "Untitled", date: "2022", clay: "Stoneware",  images: ["https://imgur.com/Lov6V4j.jpeg", "https://imgur.com/RBB8byv.jpeg", "https://imgur.com/SFq7afx.jpeg"] },
+
+             { title: "Untitled", date: "2022", clay: "Stoneware", images: [ "https://imgur.com/b4V9vzz.jpeg", "https://imgur.com/kuvg7qv.jpeg", "https://imgur.com/lA3muEv.jpeg"] },
+                            { title: "Untitled", date: "2022", clay: "Stoneware",  images: ["https://imgur.com/O70q8yr.jpeg", "https://imgur.com/5O6wZ0C.jpeg", "https://imgur.com/fGRumQ2.jpeg" ] },
+               { title: "Untitled", date: "2022", clay: "Stoneware",  images: ["https://imgur.com/LRJesoY.jpeg", "https://imgur.com/2MTlmRo.jpeg", "https://imgur.com/KZQpmEs.jpeg", "https://imgur.com/OaOOn9y.jpeg", "https://imgur.com/g5PG836.jpeg"] },
+
+             { title: "Untitled", date: "2022", clay: "Stoneware",  images: ["https://imgur.com/DeV6PgY.jpeg",  "https://imgur.com/Da4fc3M.jpeg", "https://imgur.com/qy9CuN9.jpeg", "https://imgur.com/5jOsDOo.jpeg"] },
+              
+               { title: "Untitled", date: "2022", clay: "Stoneware with White Engobe",  images: [ "https://imgur.com/wG6uI6a.jpeg", "https://imgur.com/EeKPjp9.jpeg","https://imgur.com/sFEhgy0.jpeg"] },
+            
+             { title: "Bug Plate 1.0", date: "2022", clay: "Stoneware with White Engobe",  images: ["https://imgur.com/sq629fu.jpeg", "https://imgur.com/B6t0NQx.jpeg"] },
+   { title: "Bug Plate 2.0", date: "2022", clay: "Stoneware with White Engobe",  images: ["https://imgur.com/UKUK3xd.jpeg", "https://imgur.com/nyo9zj3.jpeg"] },
+              
+                             { title: "Untitled", date: "2022", clay: "Stoneware with White Engobe",  images: ["https://imgur.com/JjDpcTP.jpeg", "https://imgur.com/dQ2E8f8.jpeg", "https://imgur.com/srXTPZN.jpeg"] },
+                 { title: "Untitled", date: "2022", clay: "Stoneware with White Engobe",  images: ["https://imgur.com/1PTF8rW.jpeg", "https://imgur.com/qaUAEQD.jpeg", ] },
+    ];
+
+        const ceramicsSeries3Data = [
+                                 {  title: "Untitled", date: "2022", clay: "Stoneware",  images: ["https://imgur.com/duBwgNU.jpeg", "https://imgur.com/Q011IKK.jpeg"] }, 
+                                     {  title: "Untitled",date: "2021", clay: "Stoneware",  images: ["https://imgur.com/AZNcFPy.jpeg", "https://imgur.com/W9wluDK.jpeg"] }, 
+                                       { title: "Untitled", date: "2021", clay: "Stoneware",  images: ["https://imgur.com/uXuB3G4.jpeg", "https://imgur.com/4l1NXtq.jpeg"] }, 
+                                                                               {title: "Untitled",  date: "2022", clay: "Stoneware", images: ["https://imgur.com/KiOE9HD.jpeg", "https://imgur.com/Ob4yGuC.jpeg", "https://imgur.com/b9zaUvq.jpeg"] }, 
+                { title: "Untitled", date: "2022", clay: "Stoneware", images: ["https://imgur.com/3mV3xW0.jpeg", "https://imgur.com/3j6HAQk.jpeg"] }, 
+                                       {  title: "Untitled",date: "2022", clay: "Stoneware", images: ["https://imgur.com/EVGezsq.jpeg", "https://imgur.com/7nS7zpj.jpeg"] }, 
+                                 {title: "Untitled", date: "2021", clay: "Stoneware",  images: ["https://imgur.com/fNQ2jBc.jpeg", "https://imgur.com/oSuJYj2.jpeg"] }, 
+                                    {title: "Untitled", date: "2021", clay: "Stoneware",  images: ["https://imgur.com/CVk8sVb.jpeg", "https://imgur.com/CG72T8D.jpeg", "https://imgur.com/CwLBiw9.jpeg"] }, 
+                                 {title: "Untitled", date: "2022", clay: "Stoneware",  images: ["https://imgur.com/02EeQM0.jpeg", "https://imgur.com/MyZ8ouy.jpeg"] }, 
+                                          {title: "Untitled",  date: "2021", clay: "Stoneware",  images: ["https://imgur.com/MYLutXY.jpeg", "https://imgur.com/rz338xA.jpeg", "https://imgur.com/KAywAKZ.jpeg"] }, 
+                                                                         {title: "Untitled",  date: "2023", clay: "Porcelain", images: ["https://imgur.com/2zrMJ49.jpeg", "https://imgur.com/QLZrLBH.jpeg", "https://imgur.com/ThRX4Lw.jpeg"] }, 
+                                          { title: "Untitled", date: "2022", clay: "Stoneware with White Engobe",  images: ["https://imgur.com/G9fOKVz.jpeg", "https://imgur.com/NnvbmH0.jpeg"] }, 
+                                          { title: "Untitled", date: "2022", clay: "Porcelain",  images: ["https://imgur.com/qEsWVdW.jpeg", "https://imgur.com/gWV1QFZ.jpeg"] }, 
+                                   {title: "Untitled", date: "2021", clay: "Stoneware",  images: [ "https://imgur.com/0dJue8c.jpeg","https://imgur.com/hu2VSZ7.jpeg"] }, 
+    ];
+
+        // Printmaking data
+        const printmakingData = [
+            { title: "Strawberry Dog", clay: "9 Layer Screen Print",  date: "2021", dimensions: "21 in x 26 in", images: ["https://imgur.com/AYPWuBS.jpeg"] },
+            { title: "Strawberry Rhino", clay: "Screen Print",  date: "2021", dimensions: "12in x 18in", images: ["https://imgur.com/vt3Np0A.jpeg"] },
+            { title: "Chicken Feet", clay: "Screen Print", dimensions: "14in x 12in", date: "2021", images: ["https://imgur.com/cfPrOh1.jpeg"] },
+            { title: "What is your future?",clay: "Screen Print", date: "2021", dimensions: "12in x 9in", images: ["https://imgur.com/Y9TkBIq.jpeg"] },
+            { title: "Dodo", clay: "Block Print", dimensions: "20in x 16in", date: "2021", images: ["https://imgur.com/AyidQgk.jpeg"] },
+            { title: "Fish Mafia", clay: "Block Print", date: "2020", dimensions: "16in x 10in", images: ["https://imgur.com/5wekFMJ.jpeg"] },
+            { title: "Fishhouse",clay: "Block Print",  date: "2021", dimensions: "18in x 21in", images: ["https://imgur.com/qn3ORvn.jpeg"] },
+            { title: " ", date: "2020", clay: "Block Print", dimensions: "16in x 13.5in", images: ["https://imgur.com/ZQAnYEu.jpeg"] },
+            { title: "Just Vibin", clay: "Block Print", date: "2020", dimensions: "12in x 9in", images: ["https://imgur.com/OelZJBd.jpeg"] }
+        ];
+
+        // Design projects data
+        const designProjects = [
+            {
+                id: "project1",
+                name: "Migration Wall System",
+                thumbnail: "https://imgur.com/DmS2mrN.jpeg",
+                images: ["https://via.placeholder.com/800x600", "https://via.placeholder.com/800x600", "https://via.placeholder.com/800x600"],
+                description: "This is a detailed description of Project 1. Replace this with your actual project description explaining the concept, process, and outcomes.",
+                pdfUrl: "https://yourpdflink.com/project1.pdf",
+                tags: ["space", "research", "object"]
+            },
+            {
+                id: "project2",
+                name: "SandBox Lab",
+                thumbnail: "https://imgur.com/N8N8sMo.jpeg",
+                images: ["https://imgur.com/uA6yjcP.jpeg", "https://imgur.com/QyLeicu.jpeg", "https://imgur.com/IKsiprS.jpeg", "https://imgur.com/QyLeicu.jpeg"],
+                tags: ["3d printed", "space", "furniture"],
+                description: "Sandbox Lab is a modular wall and seating system designed for the Innovation Center at UIC to support multiple classrooms within a single open-plan space. The project addresses the challenge of running two labs simultaneously while maintaining focus, comfort, and flexibility for students new to coding and collaborative work. The system creates semi-permanent classroom environments using mobile wall modules that integrate seating, pin-up surfaces, and lighting. Translucent polycarbonate facades allow light to pass through the space while reducing visual distraction, preserving an open and welcoming atmosphere inspired by Apple's minimal design language. Each wall module combines laminated plywood seating, PET felt cushions, aluminum channeling, and welded angle-iron frames to balance warmth with structural clarity. A built-in slot behind the seating allows foam-core boards to be inserted as movable pin-up surfaces, encouraging iterative thinking and easy sharing of work. Nested mobile workstations support solo, collaborative, and group learning configurations. Fabricated through full-scale prototyping and material testing, the Sandbox Lab prioritizes adaptability, student comfort, and hands-on learning, transforming an open room into a flexible educational environment without relying on permanent architecture.",
+                pdfUrl: "https://drive.google.com/file/d/1cGKMfch-Io3BKTnKjmAv3KK55IrHxRFe/view?usp=sharing"
+            },
+            {
+                id: "project3",
+                name: "Eggshell Book",
+                thumbnail: "https://via.placeholder.com/400",
+                images: ["https://imgur.com/KklnLya.jpeg", "https://imgur.com/31qjxYA.jpeg",  "https://imgur.com/WxJoc44.jpeg", "https://imgur.com/xh6cb4x.jpeg", "https://imgur.com/GNVnJeX.jpeg", "https://imgur.com/83ZPWFA.jpeg"],
+                tags: ["casted", "object"],
+                description: "This is a detailed description of Project 3.",
+                pdfUrl: "https://yourpdflink.com/project3.pdf"
+            },
+            {
+                id: "project4",
+                name: "Surreal Glass Show Notes",
+                thumbnail: "https://imgur.com/EL2gofY.jpeg",
+                images: ["https://imgur.com/XCzbfLQ.jpeg", "https://imgur.com/NaDbonw.jpeg", "https://imgur.com/UwPYuqZ.jpeg","https://imgur.com/6r0DGX7.jpeg","https://imgur.com/2KvV4ho.jpeg"],
+                tags: ["research", "bio material"],
+                description: "This is a detailed description of Project 4.",
+                pdfUrl: "https://yourpdflink.com/project4.pdf"
+            },
+            {
+                id: "project5",
+                name: "Bungee Lamp",
+                thumbnail: "https://imgur.com/hYysIEw.jpeg",
+                images: ["https://imgur.com/x8zwSk4.jpeg","https://imgur.com/hYysIEw.jpeg",  "https://imgur.com/k2V8xAd.jpeg", "https://imgur.com/2h9K5aQ.jpeg", "https://imgur.com/i3fzJhZ.jpeg", "https://imgur.com/75wo3yt.jpeg", "https://imgur.com/vXr5cf8.jpeg"],
+                tags: ["space", "furniture"],
+                description: "This is a detailed description of Project 5.",
+                pdfUrl: "https://yourpdflink.com/project5.pdf"
+            },
+            {
+                id: "project6",
+                name: "Squish Me",
+                thumbnail: "https://imgur.com/ELrL9nR.jpeg",
+                images: ["https://imgur.com/Rolvvho.jpeg","https://imgur.com/moJBmEu.jpeg",  "https://imgur.com/2rFpHUA.jpeg", "https://imgur.com/mzjU6d1.jpeg","https://imgur.com/tFh9VpT.jpeg", "https://imgur.com/OFIFGtC.jpeg"],
+                tags: ["3d printed", "object"],
+                description: "This is a detailed description of Project 6.",
+                pdfUrl: "https://yourpdflink.com/project6.pdf"
+            },
+            {
+                id: "project7",
+                name: "Stolon Toaster Oven",
+                thumbnail: "https://via.placeholder.com/400",
+                images: ["https://imgur.com/SsDTgOe.jpeg","https://imgur.com/DCYQJQI.jpeg", "https://imgur.com/cadsE5f.jpeg","https://imgur.com/b5oOa4g.jpeg"],
+                tags: ["bio material", "casted"],
+                description: "This is a detailed description of Project 7.",
+                pdfUrl: "https://yourpdflink.com/project7.pdf"
+            },
+            {
+                id: "project8",
+                name: "Project Name 8",
+                thumbnail: "https://via.placeholder.com/400",
+                images: ["https://via.placeholder.com/800x600", "https://imgur.com/cadsE5f.jpeg", "https://via.placeholder.com/800x600"],
+                tags: ["research", "space"],
+                description: "This is a detailed description of Project 8.",
+                pdfUrl: "https://yourpdflink.com/project8.pdf"
+            },
+            {
+                id: "project9",
+                name: "All Terrain Casio Headphones",
+                thumbnail: "https://imgur.com/7cL7V79.jpeg",
+                images: ["https://imgur.com/C0x6gBm.jpeg", "https://imgur.com/pq5U8QU.jpeg", "https://imgur.com/JEasK5X.jpeg","https://imgur.com/3rGnMdu.jpeg", "https://imgur.com/m4g1yyU.jpeg", "https://imgur.com/gsqhVS4.jpeg"],
+                tags: ["furniture", "3d printed"],
+                description: "This is a detailed description of Project 9.",
+                pdfUrl: "https://yourpdflink.com/project9.pdf"
+            },
+            {
+                id: "project10",
+                name: "Project Name 10",
+                thumbnail: "https://via.placeholder.com/400",
+                images: ["https://via.placeholder.com/800x600", "https://via.placeholder.com/800x600"],
+                tags: ["object", "casted"],
+                description: "This is a detailed description of Project 10.",
+                pdfUrl: "https://yourpdflink.com/project10.pdf"
+            },
+            {
+                id: "project11",
+                name: "Project Name 11",
+                thumbnail: "https://via.placeholder.com/400",
+                images: ["https://via.placeholder.com/800x600"],
+                tags: ["bio material", "research"],
+                description: "This is a detailed description of Project 11.",
+                pdfUrl: "https://yourpdflink.com/project11.pdf"
+            },
+            {
+                id: "project12",
+                name: "Project Name 12",
+                thumbnail: "https://via.placeholder.com/400",
+                images: ["https://via.placeholder.com/800x600", "https://via.placeholder.com/800x600", "https://via.placeholder.com/800x600"],
+                tags: ["space", "furniture", "3d printed"],
+                description: "This is a detailed description of Project 12.",
+                pdfUrl: "https://yourpdflink.com/project12.pdf"
+            }
+        ];
+
+        // Track current filter state
+        let currentDesignFilter = 'all';
+        let currentProjectId = null;
+        let previousPage = null;
+
+        // Initialize design navigation and grid
+        function initializeDesign() {
+            const allTags = new Set();
+            designProjects.forEach(project => {
+                project.tags.forEach(tag => allTags.add(tag));
+            });
+
+            const designNav = document.getElementById('design-nav');
+            designProjects.forEach(project => {
+                const navItem = document.createElement('div');
+                navItem.className = 'design-nav-item';
+                navItem.textContent = project.name;
+                navItem.onclick = () => openDesignProject(project.id);
+                designNav.appendChild(navItem);
+            });
+
+            renderDesignGrid();
+            designProjects.forEach(project => createDesignDetailPage(project));
+            allTags.forEach(tag => createTagFilterPage(tag));
+        }
+
+        function renderDesignGrid(filterTag = 'all') {
+            const grid = document.getElementById('design-grid');
+            grid.innerHTML = '';
+
+            const filteredProjects = filterTag === 'all' 
+                ? designProjects 
+                : designProjects.filter(p => p.tags.includes(filterTag));
+
+            filteredProjects.forEach(project => {
+                const card = document.createElement('div');
+                card.className = 'design-project-card';
+                card.onclick = () => openDesignProject(project.id);
+                card.innerHTML = `
+                    <img src="${project.thumbnail}" alt="${project.name}">
+                    <div class="design-project-name">${project.name}</div>
+                `;
+                grid.appendChild(card);
+            });
+
+            document.querySelectorAll('.design-nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            document.querySelector(`[data-filter="${filterTag}"]`)?.classList.add('active');
+        }
+
+        function filterDesignProjects(tag) {
+            currentDesignFilter = tag;
+            renderDesignGrid(tag);
+        }
+
+        function createTagFilterPage(tag) {
+            const page = document.createElement('div');
+            page.className = 'page design-tag-view hidden';
+            page.id = `design-tag-${tag}`;
+
+            const header = document.createElement('div');
+            header.className = 'design-tag-header';
+            header.textContent = tag;
+            page.appendChild(header);
+
+            const backBtn = document.createElement('div');
+            backBtn.className = 'design-back-button';
+            backBtn.textContent = 'Back';
+            backBtn.onclick = () => {
+                if (previousPage && previousPage.startsWith('design-project')) {
+                    navigate(previousPage);
+                } else {
+                    currentDesignFilter = 'all';
+                    navigate('design');
+                }
+            };
+            page.appendChild(backBtn);
+
+            const content = document.createElement('div');
+            content.className = 'design-tag-content';
+            
+            const grid = document.createElement('div');
+            grid.className = 'design-grid';
+            
+            designProjects
+                .filter(p => p.tags.includes(tag))
+                .forEach(project => {
+                    const card = document.createElement('div');
+                    card.className = 'design-project-card';
+                    card.onclick = () => openDesignProject(project.id, tag);
+                    card.innerHTML = `
+                        <img src="${project.thumbnail}" alt="${project.name}">
+                        <div class="design-project-name">${project.name}</div>
+                    `;
+                    grid.appendChild(card);
+                });
+            
+            content.appendChild(grid);
+            page.appendChild(content);
+
+            document.body.insertBefore(page, document.querySelector('.footer'));
+        }
+
+        function createDesignDetailPage(project) {
+            const page = document.createElement('div');
+            page.className = 'page design-detail hidden';
+            page.id = `design-${project.id}`;
+
+            // Desktop nav
+            const nav = document.createElement('div');
+            nav.className = 'design-nav';
+            nav.style.position = 'fixed';
+            nav.style.left = '40px';
+            nav.style.top = '90px';
+            nav.style.width = '200px';
+
+            const allItem = document.createElement('div');
+            allItem.className = 'design-nav-item';
+            allItem.textContent = 'All';
+            allItem.onclick = () => {
+                currentDesignFilter = 'all';
+                navigate('design');
+            };
+            nav.appendChild(allItem);
+
+            designProjects.forEach(p => {
+                const navItem = document.createElement('div');
+                navItem.className = 'design-nav-item';
+                if (p.id === project.id) navItem.classList.add('active');
+                navItem.textContent = p.name;
+                navItem.onclick = () => openDesignProject(p.id);
+                nav.appendChild(navItem);
+            });
+
+            page.appendChild(nav);
+
+            // Content wrapper
+            const content = document.createElement('div');
+            content.style.marginLeft = '240px';
+            content.style.display = 'flex';
+            content.style.gap = '0';
+
+            // ---- DESKTOP: images left, info right ----
+            const imagesDiv = document.createElement('div');
+            imagesDiv.className = 'design-detail-images';
+            project.images.forEach(imgSrc => {
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.alt = project.name;
+                imagesDiv.appendChild(img);
+            });
+
+            const scrollCircle = document.createElement('div');
+            scrollCircle.className = 'scroll-circle';
+            page.appendChild(scrollCircle);
+
+            imagesDiv.addEventListener('scroll', function() {
+                const scrollPercentage = imagesDiv.scrollTop / (imagesDiv.scrollHeight - imagesDiv.clientHeight);
+                const containerTop = imagesDiv.getBoundingClientRect().top;
+                const containerHeight = imagesDiv.clientHeight;
+                const circlePosition = containerTop + (containerHeight - 50) * scrollPercentage;
+                scrollCircle.style.top = circlePosition + 'px';
+                scrollCircle.classList.add('active');
+            });
+
+            imagesDiv.addEventListener('mouseleave', function() {
+                scrollCircle.classList.remove('active');
+            });
+
+            // Info panel
+            const infoDiv = document.createElement('div');
+            infoDiv.className = 'design-detail-info';
+
+            const titleContainer = document.createElement('div');
+            titleContainer.className = 'design-detail-title';
+            
+            const titleText = document.createElement('div');
+            titleText.className = 'design-title-text';
+            titleText.textContent = project.name;
+            
+            const navButtons = document.createElement('div');
+            navButtons.className = 'design-project-nav';
+            
+            const prevBtn = document.createElement('button');
+            prevBtn.className = 'design-nav-btn';
+            prevBtn.textContent = 'Previous';
+            prevBtn.onclick = () => navigateToAdjacentProject(project.id, -1);
+            
+            const separator = document.createElement('span');
+            separator.className = 'design-nav-separator';
+            separator.textContent = '/';
+            
+            const nextBtn = document.createElement('button');
+            nextBtn.className = 'design-nav-btn';
+            nextBtn.textContent = 'Next';
+            nextBtn.onclick = () => navigateToAdjacentProject(project.id, 1);
+            
+            navButtons.appendChild(prevBtn);
+            navButtons.appendChild(separator);
+            navButtons.appendChild(nextBtn);
+            
+            titleContainer.appendChild(titleText);
+            titleContainer.appendChild(navButtons);
+            infoDiv.appendChild(titleContainer);
+
+            const description = document.createElement('div');
+            description.className = 'design-description';
+            description.textContent = project.description;
+            infoDiv.appendChild(description);
+
+            const pdfLink = document.createElement('div');
+            pdfLink.className = 'design-pdf-link';
+            pdfLink.textContent = 'Click here to view slide deck';
+            pdfLink.onclick = () => window.open(project.pdfUrl, '_blank');
+            infoDiv.appendChild(pdfLink);
+            
+            const tagsDiv = document.createElement('div');
+            tagsDiv.className = 'design-tags';
+            project.tags.forEach(tag => {
+                const tagElem = document.createElement('div');
+                tagElem.className = 'design-tag';
+                tagElem.textContent = tag;
+                tagElem.onclick = () => filterByTag(tag);
+                tagsDiv.appendChild(tagElem);
+            });
+            infoDiv.appendChild(tagsDiv);
+
+            // Desktop: images | info
+            content.appendChild(imagesDiv);
+            content.appendChild(infoDiv);
+            page.appendChild(content);
+
+            // ---- MOBILE: separate layout injected after content ----
+            // On mobile, CSS orders: info (order:1) → images (order:2)
+            // But we also need tags/pdf/nav at the bottom (order:3)
+            // We handle this by building a mobile-only bottom section
+            const mobileBottom = document.createElement('div');
+            mobileBottom.className = 'mobile-design-bottom';
+            mobileBottom.style.display = 'none'; // shown via JS on mobile
+
+            // Mobile-only: carousel (horizontal scroll) of project images
+            const mobileCarousel = document.createElement('div');
+            mobileCarousel.style.cssText = 'display:flex;gap:10px;overflow-x:auto;padding:12px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none;';
+            project.images.forEach(imgSrc => {
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.alt = project.name;
+                img.style.cssText = 'width:85vw;flex-shrink:0;height:auto;object-fit:contain;';
+                mobileCarousel.appendChild(img);
+            });
+            mobileBottom.appendChild(mobileCarousel);
+
+            // Mobile tags
+            const mobileTagsDiv = document.createElement('div');
+            mobileTagsDiv.className = 'design-tags';
+            mobileTagsDiv.style.marginTop = '20px';
+            project.tags.forEach(tag => {
+                const tagElem = document.createElement('div');
+                tagElem.className = 'design-tag';
+                tagElem.textContent = tag;
+                tagElem.onclick = () => filterByTag(tag);
+                mobileTagsDiv.appendChild(tagElem);
+            });
+            mobileBottom.appendChild(mobileTagsDiv);
+
+            // Mobile PDF link
+            const mobilePdf = document.createElement('div');
+            mobilePdf.className = 'design-pdf-link';
+            mobilePdf.style.marginTop = '16px';
+            mobilePdf.textContent = 'Click here to view slide deck';
+            mobilePdf.onclick = () => window.open(project.pdfUrl, '_blank');
+            mobileBottom.appendChild(mobilePdf);
+
+            page.appendChild(mobileBottom);
+
+            document.body.insertBefore(page, document.querySelector('.footer'));
+        }
+
+        function navigateToAdjacentProject(currentId, direction) {
+            const currentIndex = designProjects.findIndex(p => p.id === currentId);
+            let nextIndex = currentIndex + direction;
+            
+            if (nextIndex < 0) {
+                nextIndex = designProjects.length - 1;
+            } else if (nextIndex >= designProjects.length) {
+                nextIndex = 0;
+            }
+            
+            openDesignProject(designProjects[nextIndex].id);
+        }
+
+        function openDesignProject(projectId, fromTag = null) {
+            currentProjectId = projectId;
+            previousPage = `design-${projectId}`;
+            navigate(`design-${projectId}`);
+
+            setTimeout(() => {
+                document.querySelectorAll('.design-nav-item').forEach(item => {
+                    item.classList.remove('active');
+                    const projectName = designProjects.find(p => p.id === projectId)?.name;
+                    if (item.textContent.trim() === projectName) {
+                        item.classList.add('active');
+                    }
+                });
+            }, 50);
+        }
+
+        function filterByTag(tag) {
+            currentDesignFilter = tag;
+            previousPage = `design-${currentProjectId}`;
+            navigate(`design-tag-${tag}`);
+        }
+
+        function navigateToLanding() {
+            currentDesignFilter = 'all';
+            currentProjectId = null;
+            navigate('landing');
+        }
+
+        function navigate(page) {
+            const mobile = isMobile();
+
+            // On mobile, ceramics goes to unified single page
+            if (page === 'ceramics') {
+                page = mobile ? 'mobile-ceramics-all' : 'Dots + Fur';
+            }
+
+            // Auto-redirect CV menu to first series
+            if (page === 'cv') {
+                page = 'Resume';
+            }
+
+            // Reset design view when navigating to design page
+            if (page === 'design') {
+                currentDesignFilter = 'all';
+                currentProjectId = null;
+                setTimeout(() => renderDesignGrid('all'), 50);
+            }
+
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(p => {
+                p.classList.remove('visible');
+                p.classList.add('hidden');
+            });
+
+            // Show selected page
+            const selectedPage = document.getElementById(page);
+            if (selectedPage) {
+                selectedPage.classList.remove('hidden');
+                selectedPage.classList.add('visible');
+            }
+
+            // Update active states for ceramics
+            document.querySelectorAll('.ceramics-series-nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.textContent.trim() === page) {
+                    item.classList.add('active');
+                }
+            });
+
+            // Update active states for CV
+            document.querySelectorAll('.cv-series-nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.textContent.trim() === page) {
+                    item.classList.add('active');
+                }
+            });
+
+            const isLanding = page === 'landing';
+            const isDesignDetail = page.startsWith('design-') && page !== 'design' && !page.startsWith('design-tag-');
+
+            // Desktop nav bar
+            const navBar = document.getElementById('nav-bar');
+            if (isLanding) {
+                navBar.classList.remove('active');
+            } else {
+                navBar.classList.add('active');
+            }
+            document.body.classList.remove('no-scroll');
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+
+            // Mobile UI
+            if (mobile) {
+                const mobileHeader = document.getElementById('mobile-header');
+                const mobileCloseX = document.getElementById('mobile-close-x');
+
+                // Header: hidden on landing, shown on all other pages
+                if (isLanding) {
+                    mobileHeader.style.display = 'none';
+                } else {
+                    mobileHeader.style.display = 'flex';
+                }
+                mobileHeader.classList.remove('hide-on-scroll');
+                lastScrollY = 0;
+
+                // X close button: only on design detail pages
+                if (isDesignDetail) {
+                    mobileCloseX.style.display = 'block';
+                } else {
+                    mobileCloseX.style.display = 'none';
+                }
+
+                // Bottom nav: only on design detail pages (shown on scroll to bottom)
+                if (isDesignDetail) {
+                    // design detail has no bottom nav
+                    // Show mobile-only layout sections
+                    const pageEl = document.getElementById(page);
+                    if (pageEl) {
+                        // Show mobile bottom section, hide desktop images in detail view
+                        const mobileBottom = pageEl.querySelector('.mobile-design-bottom');
+                        if (mobileBottom) mobileBottom.style.display = 'block';
+                        // Hide desktop info tags/pdf (they're in the info panel which is hidden on mobile)
+                        const desktopInfo = pageEl.querySelector('.design-detail-info');
+                        if (desktopInfo) {
+                            // On mobile, show only title and description in info div (hide tags/pdf there)
+                            const tags = desktopInfo.querySelector('.design-tags');
+                            const pdf = desktopInfo.querySelector('.design-pdf-link');
+                            if (tags) tags.style.display = 'none';
+                            if (pdf) pdf.style.display = 'none';
+                        }
+                        // Hide desktop images div (mobile carousel used instead)
+                        const desktopImages = pageEl.querySelector('.design-detail-images');
+                        if (desktopImages) desktopImages.style.display = 'none';
+                    }
+                } else {
+                    hideBottomNav();
+                }
+            }
+        }
+
+        document.body.classList.remove('no-scroll');
+
+        function createGalleryItem(item, type) {
+            const div = document.createElement('div');
+            div.className = 'gallery-item';
+            div.innerHTML = `<img src="${item.images[0]}" alt="${item.title}">`;
+            div.onclick = () => openModal(item, type);
+            return div;
+        }
+
+        let currentModalData = null;
+        let currentModalType = null;
+        let currentModalIndex = 0;
+
+        function openModal(item, type) {
+            const modal = document.getElementById('modal');
+            const image = document.getElementById('modal-image');
+            const title = document.getElementById('modal-title');
+            const details = document.getElementById('modal-details');
+            const carousel = document.getElementById('carousel');
+            const modalMobileCloseX = document.getElementById('modal-mobile-close-x');
+
+            currentModalData = type === 'ceramics' ? [...ceramicsSeries1Data, ...ceramicsSeries2Data, ...ceramicsSeries3Data] :
+                               type === 'printmaking' ? printmakingData : [];
+
+            currentModalType = type;
+            currentModalIndex = currentModalData.indexOf(item);
+
+            image.src = item.images[0];
+            image.classList.remove('zoomed');
+            title.textContent = item.title || '';
+
+            // Build details — only show lines that have content, no empty gaps
+            const detailParts = [];
+            if (item.dimensions && item.dimensions.trim()) detailParts.push(item.dimensions.trim());
+            if (item.clay && item.clay.trim()) detailParts.push(item.clay.trim());
+            if (item.date && item.date.trim()) detailParts.push(item.date.trim());
+            details.textContent = detailParts.join('\n');
+
+            carousel.innerHTML = '';
+
+            if (isMobile()) {
+                // Mobile: hide main image, show all images stacked in carousel
+                image.style.display = 'none';
+                item.images.forEach(imgSrc => {
+                    const img = document.createElement('img');
+                    img.src = imgSrc;
+                    carousel.appendChild(img);
+                });
+                // Show modal X close button
+                modalMobileCloseX.style.display = 'block';
+                // Set bottom nav context
+                showBottomNav();
+                // Update bottom nav labels
+                document.getElementById('mobile-nav-prev').textContent = '← Previous';
+                document.getElementById('mobile-nav-next').textContent = 'Next →';
+            } else {
+                image.style.display = '';
+                modalMobileCloseX.style.display = 'none';
+                if (type === 'ceramics' && item.images.length > 1) {
+                    item.images.forEach((img, index) => {
+                        const thumb = document.createElement('img');
+                        thumb.src = img;
+                        thumb.className = index === 0 ? 'active' : '';
+                        thumb.onclick = () => {
+                            image.src = img;
+                            image.classList.remove('zoomed');
+                            carousel.querySelectorAll('img').forEach(t => t.classList.remove('active'));
+                            thumb.classList.add('active');
+                        };
+                        carousel.appendChild(thumb);
+                    });
+                }
+            }
+
+            image.onclick = (e) => {
+                if (!isMobile()) {
+                    e.stopPropagation();
+                    image.classList.toggle('zoomed');
+                }
+            };
+
+            modal.classList.add('active');
+
+            // On mobile, scroll to top of modal and check if bottom nav should show
+            if (isMobile()) {
+                window.scrollTo(0, 0);
+
+            }
+        }
+
+        function navigateModal(direction) {
+            currentModalIndex += direction;
+
+            if (currentModalIndex < 0) {
+                currentModalIndex = currentModalData.length - 1;
+            } else if (currentModalIndex >= currentModalData.length) {
+                currentModalIndex = 0;
+            }
+
+            openModal(currentModalData[currentModalIndex], currentModalType);
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+            document.getElementById('modal-mobile-close-x').style.display = 'none';
+            hideBottomNav();
+        }
+
+        // Initialize galleries
+        ceramicsSeries1Data.forEach(item => {
+            document.getElementById('Dots + Fur-grid').appendChild(createGalleryItem(item, 'ceramics'));
+            const mobGrid = document.getElementById('mob-dots-fur-grid');
+            if (mobGrid) mobGrid.appendChild(createGalleryItem(item, 'ceramics'));
+        });
+
+        ceramicsSeries2Data.forEach(item => {
+            document.getElementById('Bugs-grid').appendChild(createGalleryItem(item, 'ceramics'));
+            const mobGrid = document.getElementById('mob-bugs-grid');
+            if (mobGrid) mobGrid.appendChild(createGalleryItem(item, 'ceramics'));
+        });
+
+        ceramicsSeries3Data.forEach(item => {
+            document.getElementById('More-grid').appendChild(createGalleryItem(item, 'ceramics'));
+            const mobGrid = document.getElementById('mob-more-grid');
+            if (mobGrid) mobGrid.appendChild(createGalleryItem(item, 'ceramics'));
+        });
+
+        printmakingData.forEach(item => {
+            document.getElementById('printmaking-grid').appendChild(createGalleryItem(item, 'printmaking'));
+        });
+
+        // Initialize design section
+        initializeDesign();
+
+        // Close modal on background click (desktop only)
+        document.getElementById('modal').addEventListener('click', (e) => {
+            if (!isMobile() && e.target.id === 'modal') closeModal();
+        });
+
+        // Copy email to clipboard
+        function copyEmail() {
+            const email = 'astrauskaitedesign@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                alert('Email copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy email:', err);
+            });
+        }
+    </script>
+</body>
+</html>
